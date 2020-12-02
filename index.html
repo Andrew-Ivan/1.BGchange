@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="btn__wrapper">
+		<a href="" class="btn">Change Color</a>
+	</div>
+	<style>
+		.btn__wrapper {
+			max-width: 152px;
+			margin: 50vh auto;
+		}
+
+		.btn {
+			text-decoration: none;
+			border: 1px solid black;
+			border-radius: 15px;
+			padding: 10px 30px;
+			text-align: center;
+		}
+
+		.btn:hover {
+			background: black;
+			color: white;
+		}
+	</style>
+	<script>
+
+		let btn = document.querySelector('.btn');
+		let body = document.querySelector('body');
+		btn.addEventListener('click', changeColor);
+
+		function changeColor() {
+			event.preventDefault();
+			body.style.background = `rgb(${random()},${random()},${random()})`;
+		}
+		function random() {
+			return Math.round(0 + Math.random() * (255 + 1 - 0));
+		}
+
+
+
+	</script>
+</body>
+
+</html>
